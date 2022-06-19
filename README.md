@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="EventSimulatorTrainingGif" src="./images/repository_title.gif"/>
+    <img alt="EventSimulatorTrainingGif" src="./repository_title.gif"/>
 </h1>
 
 <p align="center">
