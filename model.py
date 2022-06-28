@@ -34,8 +34,11 @@ class Model:
     
     port_count = self.distance.shape[0]
     terminal_count = self.distance.shape[1]
-    self.terminal_queue = self.terminal_queue_forecast = [[0] for _ in range(terminal_count)]
-    self.port_queue = self.port_queue_forecast = [[0] for _ in range(port_count)]
+    self.terminal_queue = [[0] for _ in range(terminal_count)]
+    self.terminal_queue_forecast = [[0] for _ in range(terminal_count)]
+    self.port_queue = [[0] for _ in range(port_count)]
+    self.port_queue_forecast = [[0] for _ in range(port_count)]
+    
 
   def starting_events(self, simulator: simulator.Simulator):
     """
