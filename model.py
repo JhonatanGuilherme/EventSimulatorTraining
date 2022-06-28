@@ -47,15 +47,15 @@ class Model:
     Args:
       simulator (:obj:Simulator): Simulator.
     """
-    id = 0
+    event_id = 0
     for train_model_index in range(len(self.train_count)):
       for _ in range(self.train_count[train_model_index]):
         port_index = 0
         terminal_index = self.dispatch_to_terminal(simulator.time, port_index, train_model_index)
         calculated_time = simulator.time + self.distance[port_index, terminal_index] / self.train_speed[train_model_index]
-        data = [port_index, terminal_index, train_model_index, id]
+        data = [port_index, terminal_index, train_model_index, event_id]
         simulator.add_event(calculated_time, self.on_finish_unloaded_path, data)
-        id += 1
+        event_id += 1
   
   def queue_time(self):
     """
