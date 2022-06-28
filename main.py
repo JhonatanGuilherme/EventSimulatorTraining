@@ -36,12 +36,6 @@ for i in range(1, maximum_number_of_trains):
   print(f" Numerical productivity - {numerical_productivity[-1] * 3.6:.0f}")
   print(f"Analytical productivity - {analytical_productivity[-1] * 3.6:.0f}")
 
-  # hf, ha = plt.subplots()
-  # plt.plot(time / 3600, productivity * 3.6)
-  # plt.xlabel("time (hours)")
-  # plt.ylabel("productivity (ton / hours)")
-  # plt.title(f"{i} trains")
-
 hf, ha = plt.subplots()
 plt.plot(number_of_trains, np.array(numerical_productivity) * 3.6, label="numerical")
 plt.plot(number_of_trains, np.array(analytical_productivity) * 3.6, label="analytical")
